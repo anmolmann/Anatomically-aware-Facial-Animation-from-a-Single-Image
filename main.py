@@ -1,6 +1,6 @@
-# solution.py ---
+# main.py ---
 #
-# Filename: solution.py
+# Filename: main.py
 # Maintainer: Anmol Mann
 
 # Description: for training and testing the model
@@ -150,18 +150,12 @@ def train(config):
     # Prepare checkpoint file and model file to save and load from
     checkpoint_file = os.path.join(config.save_dir, "checkpoint.pth")
 
-    # Check for existing training results. If it existst, and the configuration
-    # is set to resume `config.resume==True`, resume from previous training. If
-    # not, delete existing checkpoint.
+    # Check for existing training results. 
     if os.path.exists(checkpoint_file):
         if config.resume:
-            # Use `torch.load` to load the checkpoint file and the load the
-            # things that are required to continue training. For the model and
-            # the optimizer, use `load_state_dict`. It's actually a good idea
-            # to code the saving part first and then code this part.
+            
             print("Checkpoint found! Resuming")
             # Read checkpoint file.
-
             # reference: https://pytorch.org/docs/stable/torch.html?highlight=load#torch.load
             load_res = torch.load(checkpoint_file, map_location = lambda storage, loc: storage)
             # Resume iterations
@@ -172,10 +166,6 @@ def train(config):
             # Resume optimizer
             gen_optimizer.load_state_dict(load_res["gen_optimizer"])
             dis_optimizer.load_state_dict(load_res["dis_optimizer"])
-            # Note that we do not resume the epoch, since we will never be able
-            # to properly recover the shuffling, unless we remember the random
-            # seed, for example. For simplicity, we will simply ignore this,
-            # and run `config.num_epoch` epochs regardless of resuming.
         else:
             os.remove(checkpoint_file)
 
@@ -700,4 +690,4 @@ if __name__ == "__main__":
 
 
 #
-# solution.py ends here
+# main.py ends here
