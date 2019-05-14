@@ -1,0 +1,18 @@
+MIT License
+
+Copyright (c) 2019 Anmol Mann 
+
+**References used for Re-Implementation of GANimation:**
+
+**NOTE: The base code is referenced from the Assignments completed during the course CSC 586B.**
+
+[1] https://pytorch.org/tutorials/beginner/data_loading_tutorial.html
+[2] https://github.com/albertpumarola/GANimation
+[3] https://pytorch.org/docs/stable/torch.html?highlight=load#torch.load
+[4] https://stackoverflow.com/questions/48324152/pytorch-how-to-change-the-learning-rate-of-an-optimizer-at-any-given-moment-no
+[5] https://goo.gl/bqeW1K (CycleGAN and pix2pix)
+[6] https://pytorch.org/tutorials/beginner/dcgan_faces_tutorial.html
+[7] https://hardikbansal.github.io/CycleGANBlog/
+[8] https://pytorch.org/docs/master/nn.html?highlight=modulelist#torch.nn.Module.apply
+
+``NOTE: Some of the references are also provided in the report.pdf``
