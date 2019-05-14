@@ -9,7 +9,7 @@ This approach can control the intensity of the desired expression.
 <img src="imgs_gif/3.gif">
 </div>
 
-**This is not an official implementation.**
+**`This is NOT an official implementation.`**
 
 ### Prerequisites
 
@@ -68,3 +68,4 @@ Please review the LICENSE file to review all the code references used for the re
 ##### Author
 
 Anmol Mann, anmolmann@uvic.ca
+- Course: CSC 586B
