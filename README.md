@@ -9,7 +9,7 @@ This approach can control the intensity of the desired expression.
 <img src="imgs_gif/3.gif">
 </div>
 
-**`This is NOT an official implementation.`**
+Disclaimer: **`This is NOT an official implementation.`**
 
 ### Prerequisites
 
