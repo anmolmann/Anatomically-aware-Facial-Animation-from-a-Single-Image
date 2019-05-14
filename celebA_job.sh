@@ -8,4 +8,4 @@
 #SBATCH --cpus-per-task=24
 #SBATCH --time=0-30:00            # time (DD-HH:MM)
 
-python solution.py --mode train
+python main.py --mode train
