@@ -9,6 +9,8 @@ This approach can control the intensity of the desired expression.
 <img src="imgs_gif/3.gif">
 </div>
 
+**This is not an official implementation.**
+
 ### Prerequisites
 
 Install the packages in the requirement.txt file.
@@ -43,8 +45,6 @@ The model is trained on Compute Canada. So, a bunch of different script files we
     *utils/* - has all the code used for loading the data into the model.
     
 Model Checkpoint, logs and some test results are provided at **[HERE](https://drive.google.com/open?id=11tLBd2SfgGXkchKyUzg69WLkqlqgaDj7)**.
-
-**This is not an official implementation.**
 
 ### Data Preparation
 Scripts and python code in the EmotioNet directory is used to extract images and their Action Units from the data.
