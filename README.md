@@ -25,7 +25,12 @@ The data directory is similar to the actual [project implementation](https://git
     - I used Openface (.exe) on Windows platform.
 
 *The celebA data's aus_openface.pkl, train_ids.csv, and test_ids.csv files can be downloaded at [this link](https://drive.google.com/file/d/1qxvOmTpukbNHJsY5MyEq05SlvvtMpZp6/view).*
-    
+
+### Pros
+- A flexible and robust testing module with interpolations.
+- Normalization layer is a bit different when using Instance Normalization. Some existing issues were resolved here.
+- The code is compatible for both non-GPU / GPU devices. But it is *recommended* to only train the model on a GPU device otherwise the device may hang or behave abruptly. 
+
 ### Training
 
 The model is trained on Compute Canada. So, a bunch of different script files were used to run the jobs.
@@ -34,11 +39,12 @@ The model is trained on Compute Canada. So, a bunch of different script files we
     [2] EmotioNet_job.sh - Review this script to train the model on EmotioNet dataset.
     
     *model.py* - has the generator and discriminator model architecture.
-    *solution.py* - has both the training and testing functionalities of the model.
+    *main.py* - has both the training and testing functionalities of the model.
     *utils/* - has all the code used for loading the data into the model.
     
 Model Checkpoint, logs and some test results are provided at **[HERE](https://drive.google.com/open?id=11tLBd2SfgGXkchKyUzg69WLkqlqgaDj7)**.
-    
+
+**This is not an official implementation.**
 
 ### Data Preparation
 Scripts and python code in the EmotioNet directory is used to extract images and their Action Units from the data.
@@ -48,8 +54,8 @@ When unzipping the celebA and EmotioNet dir. Create imgs/ directory in both of t
 
 ### Testing
 
-    [1] celebA dataset - python3 solution.py --mode test
-    [2] EmotioNet dataset - python3 solution.py --mode test --data_dir EmotioNet
+    [1] celebA dataset - python3 main.py --mode test
+    [2] EmotioNet dataset - python3 main.py --mode test --data_dir EmotioNet
 
     To generate gif images, use flag --as_gif True during testing.
 
@@ -58,8 +64,6 @@ Some of the results included losses and interpolations (GIF and JPG images gener
 ##### Licenses
 
 Please review the LICENSE file to review all the code references used for the re-implementation.
-
-``NOTE: The base code is referenced from the Assignments completed during the course CSC 586B.``
 
 ##### Author
 
