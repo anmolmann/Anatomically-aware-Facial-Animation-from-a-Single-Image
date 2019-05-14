@@ -4,8 +4,6 @@ Copyright (c) 2019 Anmol Mann
 
 **References used for Re-Implementation of GANimation:**
 
-**NOTE: The base code is referenced from the Assignments completed during the course CSC 586B.**
-
 [1] https://pytorch.org/tutorials/beginner/data_loading_tutorial.html
 [2] https://github.com/albertpumarola/GANimation
 [3] https://pytorch.org/docs/stable/torch.html?highlight=load#torch.load
