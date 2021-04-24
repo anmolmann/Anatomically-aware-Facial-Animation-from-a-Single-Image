@@ -1,7 +1,6 @@
 ## ReImplementation of GANimation: Anatomically-aware Facial Animation from a Single Image
 
-Its a GAN architecture conditioned on Action Units (AU) annotations. This model generates facial expressions in a continuous domain. This work is based on this [paper](https://arxiv.org/abs/1807.09251).
-This approach can control the intensity of the desired expression.
+Its a GAN architecture conditioned on Action Units (AU) annotations. This model generates facial expressions in a continuous domain. This work is based on this [paper](https://arxiv.org/abs/1807.09251) and can control the intensity of a desired human expression.
 
 <div align = "center">
 <img src="imgs_gif/1.gif">
