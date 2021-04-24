@@ -54,7 +54,7 @@ When unzipping the celebA and EmotioNet dir. Create imgs/ directory in both of t
 
 ### Testing
 
-The test results are reported and analyzed in *report.pdf*.
+The test results are reported and analyzed in *Report.pdf*.
 
     [1] celebA dataset - python3 main.py --mode test
     [2] EmotioNet dataset - python3 main.py --mode test --data_dir EmotioNet
