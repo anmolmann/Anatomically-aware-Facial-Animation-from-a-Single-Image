@@ -11,6 +11,15 @@ This approach can control the intensity of the desired expression.
 
 Disclaimer: **`This is NOT an official implementation.`**
 
+## Table of contents
+
+- [Prerequisites](#prerequisites)
+- [Dataset Used](#dataset-used)
+- [Pros](#pros)
+- [Data Preparation](#data-preparation)
+- [Training](#training)
+- [Testing](#testing)
+
 ### Prerequisites
 
 Install the packages in the requirement.txt file.
@@ -33,6 +42,12 @@ The data directory is similar to the actual [project implementation](https://git
 - Normalization layer is a bit different when using Instance Normalization. Some existing issues were resolved here.
 - The code is compatible for both non-GPU / GPU devices. But it is *recommended* to only train the model on a GPU device otherwise the device may hang or behave abruptly. 
 
+### Data Preparation
+Scripts and python code in the EmotioNet directory is used to extract images and their Action Units from the data.
+These scripts and codes have not been linked to the main implementation directly. But they were used in the first place to generate the EmotioNet dataset in order to provide the input data to the model to be trained upon.
+
+When unzipping the celebA and EmotioNet dir. Create imgs/ directory in both of them. This img dir will consists of all the images included in the dictionary in aus_openface.pkl.
+
 ### Training
 
 The model is trained on Compute Canada. So, a bunch of different script files were used to run the jobs.
@@ -45,12 +60,6 @@ The model is trained on Compute Canada. So, a bunch of different script files we
     *utils/* - has all the code used for loading the data into the model.
     
 Model Checkpoint, logs and some test results are provided at **[HERE](https://drive.google.com/open?id=11tLBd2SfgGXkchKyUzg69WLkqlqgaDj7)**.
-
-### Data Preparation
-Scripts and python code in the EmotioNet directory is used to extract images and their Action Units from the data.
-These scripts and codes have not been linked to the main implementation directly. But they were used in the first place to generate the EmotioNet dataset in order to provide the input data to the model to be trained upon.
-
-When unzipping the celebA and EmotioNet dir. Create imgs/ directory in both of them. This img dir will consists of all the images included in the dictionary in aus_openface.pkl.
 
 ### Testing
 
